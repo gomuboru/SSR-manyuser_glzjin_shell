@@ -320,6 +320,7 @@ SSR_installation(){
 	libsodium_installation
 	
 	cd ${shadowsocks_install_folder} && git clone -b manyuser https://github.com/gomuboru/p3.git
+	mv p3 shadowsocks
 	cd shadowsocks && cp apiconfig.py userapiconfig.py && cp config.json user-config.json
 	echo '* soft nofile 512000'  >> /etc/security/limits.conf
 	echo '* hard nofile 512000'  >> /etc/security/limits.conf
